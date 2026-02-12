@@ -4,8 +4,8 @@ class AppAssets {
   static const String iconPath = 'assets/icons';
 
   // Image paths
-  static const String logo = '$imagePath/logo.png';
-  static const String defaultAvatar = '$imagePath/avatar.png';
-  static const String defaultImage = '$imagePath/default.png';
+  static const String goldImage = '$imagePath/gold.png';
+  static const String silverImage = '$imagePath/silver.png';
+
 
 }

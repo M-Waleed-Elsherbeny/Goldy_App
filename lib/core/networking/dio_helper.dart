@@ -11,17 +11,20 @@ class DioHelper {
         receiveDataWhenStatusError: true,
         connectTimeout: Duration(seconds: 20),
         receiveTimeout: Duration(seconds: 20),
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Content-Type': 'application/json',
+          'User-Agent': 'Mozilla/5.0',
+          },
       ),
     );
   }
 
-  Future<Response> getData({
-    required String url,
+  static Future<Response> getData({
+    required String endpoint,
     Map<String, dynamic>? query,
   }) async {
     try {
-      final response = await dio.get(url, queryParameters: query);
+      final response = await dio.get(endpoint, queryParameters: query);
       return response;
     } catch (e) {
       rethrow;
